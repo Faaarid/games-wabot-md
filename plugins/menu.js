@@ -32,13 +32,14 @@ let tags = {
   '': 'No Category',
 }
 const defaultMenu = {
-  before: ` 💌 _𝐇𝐢_", %name! 
+  before: ` 💌 _𝐇𝐢_ , %name! 
   
  _𝐈'𝐦 𝐀𝐬𝐮𝐧𝐚 𝐚 𝐬𝐢𝐦𝐩𝐥𝐞 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐛𝐨𝐭_
- _𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐧𝐨𝐝𝐞𝐣𝐬 𝐛𝐲_ @${far.split('@')[0]} ,
+ _𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐧𝐨𝐝𝐞𝐣𝐬 𝐛𝐲 Farz,
  _𝐜𝐥𝐢𝐜𝐤 𝐫𝐞𝐚𝐝 𝐦𝐨𝐫𝐞 𝐭𝐨 𝐬𝐞𝐞 𝐚 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬._
 
-*Mode :* ${public ? "Public-Mode" : "Self-Mode"}
+*››* *Mode :* Public-Mode
+*››* *Hostname :* linux
 *📕Github :*
 https://github.com/Faarz
 
@@ -47,8 +48,8 @@ http://wa.me/6285692949920
 
 %readmore`.trimStart(),
   header: '      *〘 %category 〙*',
-  body: '.     › %cmd %islimit %isPremium',
-  footer: '\n',
+  body: '     › %cmd %islimit %isPremium',
+  footer: 'p\n',
   after: `
 *%npmname* | %version
 ${'```%npmdesc```'}

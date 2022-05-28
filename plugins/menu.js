@@ -32,25 +32,23 @@ let tags = {
   '': 'No Category',
 }
 const defaultMenu = {
-  before: `
-╭─「 %me 🤖」
-│ 👋🏻 Hai, %name!
-│
-│ 🧱 Limit : *%limit Limit*
-│ 🦸🏼‍♂️ Role : *%role*
-│ 🔼 Level : *%level (%exp / %maxexp)*
-│ 💫 Total XP : %totalexp ✨
-│ 
-│ 📅 Tanggal: *%week, %date*
-│ 🕰️ Waktu: *%time*
-│
-│ 📈 Uptime: *%uptime (%muptime)*
-│ 📊 Database: %rtotalreg of %totalreg
-╰────
+  before: ` 💌 _𝐇𝐢_", %name! 
+  
+ _𝐈'𝐦 𝐀𝐬𝐮𝐧𝐚 𝐚 𝐬𝐢𝐦𝐩𝐥𝐞 𝐰𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐛𝐨𝐭_
+ _𝐦𝐚𝐝𝐞 𝐰𝐢𝐭𝐡 𝐧𝐨𝐝𝐞𝐣𝐬 𝐛𝐲_ @${far.split('@')[0]} ,
+ _𝐜𝐥𝐢𝐜𝐤 𝐫𝐞𝐚𝐝 𝐦𝐨𝐫𝐞 𝐭𝐨 𝐬𝐞𝐞 𝐚 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬._
+
+*Mode :* ${public ? "Public-Mode" : "Self-Mode"}
+*📕Github :*
+https://github.com/Faarz
+
+*📮Owner :*
+http://wa.me/6285692949920
+
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '      *〘 %category 〙*',
+  body: '.     › %cmd %islimit %isPremium',
+  footer: '\n',
   after: `
 *%npmname* | %version
 ${'```%npmdesc```'}
@@ -153,8 +151,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
-    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://github.com/BochilGaming/games-wabot', 'Github', null, null, [
-      ['Donate', '/donasi'],
+    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://github.com/Faarz', 'Github', null, null, [
       ['Speed', '/ping'],
       ['Owner', '/owner']
     ], m)
